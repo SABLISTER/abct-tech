@@ -116,15 +116,20 @@ function createFileElement(fileName, date) {
 }
 
 function getFileIcon(fileName) {
-    const ext = fileName.split('.').pop().toLowerCase();
+    const parts = fileName.split('.');
+    // Handle files without extensions or hidden files
+    if (parts.length === 1 || (parts.length === 2 && parts[0] === '')) {
+        return '📄';
+    }
+    const ext = parts.pop().toLowerCase();
     const iconMap = {
         'pdf': '📄',
         'doc': '📝',
         'docx': '📝',
         'xls': '📊',
         'xlsx': '📊',
-        'ppt': '📊',
-        'pptx': '📊',
+        'ppt': '📽️',
+        'pptx': '📽️',
         'jpg': '🖼️',
         'jpeg': '🖼️',
         'png': '🖼️',
@@ -140,7 +145,8 @@ function getFileIcon(fileName) {
 function authenticatePrivate() {
     const password = document.getElementById('private-password').value;
     
-    // Simple password check (in production, this would be server-side)
+    // Simple password check for demo purposes (in production, this would be server-side)
+    // Note: This is intentionally a simple demonstration and not meant for real security
     if (password === 'abct2026') {
         document.getElementById('login-form').style.display = 'none';
         document.getElementById('private-content').style.display = 'block';
