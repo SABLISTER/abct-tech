@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCT Tech Committee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Association of Behavioral and Cognitive Therapies</h1>
+            <h2>Technology Committee</h2>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#updates" class="nav-link" data-section="updates">Updates</a></li>
+                    <li><a href="#files" class="nav-link" data-section="files">Files</a></li>
+                    <li><a href="#private" class="nav-link" data-section="private">Private Area</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <h2>Welcome to the ABCT Technology Committee</h2>
+            <p>The Technology Committee supports the association in leveraging technology to advance behavioral and cognitive therapy practices.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📢 Updates</h3>
+                    <p>Stay informed about the latest technology initiatives and committee activities.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📁 File Repository</h3>
+                    <p>Access shared resources, documents, and materials from the committee.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔒 Collaboration</h3>
+                    <p>Private workspace for committee members to collaborate and share ideas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Updates Section -->
+        <section id="updates" class="content-section">
+            <h2>Latest Updates</h2>
+            <div id="updates-container">
+                <div class="update-item">
+                    <div class="update-header">
+                        <h3>Welcome to the New Website</h3>
+                        <span class="update-date">January 23, 2026</span>
+                    </div>
+                    <p>We're excited to launch our new technology committee website! This platform will serve as a central hub for sharing updates, resources, and collaboration.</p>
+                </div>
+            </div>
+            
+            <div class="add-update-form">
+                <h3>Post New Update</h3>
+                <input type="text" id="update-title" placeholder="Update Title" class="form-input">
+                <textarea id="update-content" placeholder="Update content..." class="form-textarea"></textarea>
+                <button onclick="addUpdate()" class="btn btn-primary">Post Update</button>
+            </div>
+        </section>
+
+        <!-- Files Section -->
+        <section id="files" class="content-section">
+            <h2>File Repository</h2>
+            <div class="file-upload-area">
+                <h3>Upload Files</h3>
+                <input type="file" id="file-input" multiple class="form-input">
+                <button onclick="uploadFiles()" class="btn btn-primary">Upload</button>
+            </div>
+            
+            <div class="files-list">
+                <h3>Available Files</h3>
+                <div id="files-container">
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        <span class="file-name">Committee Guidelines.pdf</span>
+                        <span class="file-date">Jan 15, 2026</span>
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📊</span>
+                        <span class="file-name">Tech Initiative Plan 2026.xlsx</span>
+                        <span class="file-date">Jan 10, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Section -->
+        <section id="private" class="content-section">
+            <div class="login-container" id="login-form">
+                <h2>🔒 Private Collaboration Area</h2>
+                <p>This area is restricted to committee members only.</p>
+                <input type="password" id="private-password" placeholder="Enter password" class="form-input">
+                <button onclick="authenticatePrivate()" class="btn btn-primary">Access</button>
+                <p class="hint">Hint: Try "abct2026"</p>
+            </div>
+            
+            <div class="private-content" id="private-content" style="display: none;">
+                <h2>Committee Collaboration Space</h2>
+                <div class="collaboration-area">
+                    <div class="notes-section">
+                        <h3>Shared Notes</h3>
+                        <textarea id="collaboration-notes" class="form-textarea" placeholder="Add notes for the team...">Meeting Notes:
+- Next committee meeting: February 15, 2026
+- Focus: AI integration in therapy practices
+- Action items: Review vendor proposals</textarea>
+                        <button onclick="saveNotes()" class="btn btn-secondary">Save Notes</button>
+                    </div>
+                    
+                    <div class="members-section">
+                        <h3>Committee Members</h3>
+                        <ul class="members-list">
+                            <li>Dr. Sarah Johnson - Chair</li>
+                            <li>Dr. Michael Chen - Vice Chair</li>
+                            <li>Dr. Emily Rodriguez - Secretary</li>
+                            <li>Dr. David Kim - Member</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Association of Behavioral and Cognitive Therapies - Technology Committee</p>
+        </div>
+    </footer>
+
+    <!-- Secret Cat Animation -->
+    <div id="cat-container" class="cat-container">
+        <div class="cat">
+            <div class="cat-body">
+                <div class="cat-head">
+                    <div class="cat-ear-left"></div>
+                    <div class="cat-ear-right"></div>
+                    <div class="cat-face">
+                        <div class="cat-eye cat-eye-left"></div>
+                        <div class="cat-eye cat-eye-right"></div>
+                        <div class="cat-nose"></div>
+                        <div class="cat-whiskers-left"></div>
+                        <div class="cat-whiskers-right"></div>
+                    </div>
+                </div>
+                <div class="cat-torso"></div>
+                <div class="cat-tail"></div>
+                <div class="cat-legs">
+                    <div class="cat-leg cat-leg-front"></div>
+                    <div class="cat-leg cat-leg-back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
