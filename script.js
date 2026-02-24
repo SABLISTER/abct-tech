@@ -237,6 +237,7 @@ function loadStoredData() {
             container.removeChild(container.firstChild);
         }
         
+        const fragment = document.createDocumentFragment();
         updates.forEach(update => {
             if (update.title !== 'Welcome to the New Website') {
                 const div = document.createElement('div');
@@ -248,9 +249,10 @@ function loadStoredData() {
                     </div>
                     <p>${escapeHtml(update.content)}</p>
                 `;
-                container.insertBefore(div, container.firstChild);
+                fragment.insertBefore(div, fragment.firstChild);
             }
         });
+        container.insertBefore(fragment, container.firstChild);
     }
     
     // Load files
