@@ -306,12 +306,16 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background: #28a745;
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        background: #C0C0C0;
+        color: black;
+        padding: 8px 12px;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid #808080;
+        border-bottom: 2px solid #808080;
         z-index: 9999;
+        font-family: Tahoma, "MS Sans Serif", Arial, sans-serif;
+        font-size: 11px;
         animation: slideIn 0.3s ease;
     `;
     
